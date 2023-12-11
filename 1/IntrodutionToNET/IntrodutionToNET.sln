@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multitargeting", "Multitargeting\Multitargeting.csproj", "{41B1E25D-9077-4A68-BE23-CAAF428C024B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{24116019-48AD-4F96-A2FB-2ADBFCC3B014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{77D9884F-C8B7-4677-9088-ABFBA4373E65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41B1E25D-9077-4A68-BE23-CAAF428C024B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B1E25D-9077-4A68-BE23-CAAF428C024B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B1E25D-9077-4A68-BE23-CAAF428C024B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B1E25D-9077-4A68-BE23-CAAF428C024B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24116019-48AD-4F96-A2FB-2ADBFCC3B014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24116019-48AD-4F96-A2FB-2ADBFCC3B014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24116019-48AD-4F96-A2FB-2ADBFCC3B014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24116019-48AD-4F96-A2FB-2ADBFCC3B014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D9884F-C8B7-4677-9088-ABFBA4373E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D9884F-C8B7-4677-9088-ABFBA4373E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D9884F-C8B7-4677-9088-ABFBA4373E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D9884F-C8B7-4677-9088-ABFBA4373E65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
