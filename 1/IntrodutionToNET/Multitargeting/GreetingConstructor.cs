@@ -2,11 +2,11 @@
 
 namespace Multitargeting
 {
-    public class SaySmth
+    public class GreetingConstructor
     {
         public static string SayTimeAndHello(string name)
         {
-            return $"{DateTime.Now.ToLongTimeString()} \nHello, {name}!";
+            return $"{DateTime.Now.ToLongTimeString()} Hello, {name}!";
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace WindowsFormsApp
+namespace GreetingForms
 {
-    partial class FormStart
+    partial class GreetingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@ namespace WindowsFormsApp
             this.startOk.TabIndex = 0;
             this.startOk.Text = "Ok";
             this.startOk.UseVisualStyleBackColor = true;
-            this.startOk.Click += new System.EventHandler(this.startOk_Click);
+            this.startOk.Click += new System.EventHandler(this.StartOk_Click);
             // 
             // name
             // 
@@ -61,7 +61,7 @@ namespace WindowsFormsApp
             this.labelinputName.TabIndex = 2;
             this.labelinputName.Text = "Input name: ";
             // 
-            // FormStart
+            // GreetingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,8 +69,8 @@ namespace WindowsFormsApp
             this.Controls.Add(this.labelinputName);
             this.Controls.Add(this.name);
             this.Controls.Add(this.startOk);
-            this.Name = "FormStart";
-            this.Text = "FormStart";
+            this.Name = "GreetingForm";
+            this.Text = " Greeting form";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

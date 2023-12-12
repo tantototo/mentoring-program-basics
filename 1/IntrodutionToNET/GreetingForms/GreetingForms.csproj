@@ -6,8 +6,8 @@
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
         <ProjectGuid>{77D9884F-C8B7-4677-9088-ABFBA4373E65}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>WindowsFormsApp</RootNamespace>
-        <AssemblyName>WindowsFormsApp</AssemblyName>
+        <RootNamespace>GreetingForms</RootNamespace>
+        <AssemblyName>GreetingForms</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,16 +48,16 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="FormStart.cs">
+        <Compile Include="GreetingForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="FormStart.Designer.cs">
-          <DependentUpon>FormStart.cs</DependentUpon>
+        <Compile Include="GreetingForm.Designer.cs">
+          <DependentUpon>GreetingForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <EmbeddedResource Include="FormStart.resx">
-          <DependentUpon>FormStart.cs</DependentUpon>
+        <EmbeddedResource Include="GreetingForm.resx">
+          <DependentUpon>GreetingForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
