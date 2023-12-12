@@ -1,6 +1,6 @@
 ﻿using Multitargeting;
 
-var name = String.Empty;
+var name = string.Empty;
 if (args.Length != 0)
 {
     name = args[0];

@@ -13,7 +13,7 @@ namespace GreetingForms
 
         private void StartOk_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.IsNullOrEmpty(name.Text)
+            MessageBox.Show(string.IsNullOrEmpty(name.Text)
                 ? "You didn't input a name!"
                 : GreetingConstructor.SayTimeAndHello(name.Text));
         }
