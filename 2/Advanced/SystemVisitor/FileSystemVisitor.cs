@@ -10,12 +10,11 @@ public class FileSystemVisitor : IEnumerable<FileSystemInfo>
 
     public FileSystemVisitor(string root)
     {
-        _root = CheckDirectory(root);
+        _root = GetRootDirectoryInfo(root);
     }
     
-    public FileSystemVisitor(string root, Predicate<string> filter)
+    public FileSystemVisitor(string root, Predicate<string> filter): this(root)
     {
-        _root = CheckDirectory(root);
         _filter = filter;
     }
 
@@ -82,7 +81,7 @@ public class FileSystemVisitor : IEnumerable<FileSystemInfo>
         }
     }
 
-    private DirectoryInfo CheckDirectory(string directory)
+    private DirectoryInfo GetRootDirectoryInfo(string directory)
     {
         if (string.IsNullOrEmpty(directory) || !Directory.Exists(directory))
             throw new Exception("Invalid directory.");

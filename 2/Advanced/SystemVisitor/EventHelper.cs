@@ -2,12 +2,12 @@
 
 public class EventHelper
 {
-    public event EventHandler<SearchEventArgs> Start;
-    public event EventHandler<SearchEventArgs> Finish;
-    public event EventHandler<SearchEventArgs> FileFinded;
-    public event EventHandler<SearchEventArgs> DirectoryFinded;
-    public event EventHandler<SearchEventArgs> FilteredFileFinded;
-    public event EventHandler<SearchEventArgs> FilteredDirectoryFinded;
+    public event EventHandler<SearchEventArgs>? Start;
+    public event EventHandler<SearchEventArgs>? Finish;
+    public event EventHandler<SearchEventArgs>? FileFinded;
+    public event EventHandler<SearchEventArgs>? DirectoryFinded;
+    public event EventHandler<SearchEventArgs>? FilteredFileFinded;
+    public event EventHandler<SearchEventArgs>? FilteredDirectoryFinded;
 
     protected internal virtual void OnStart(SearchEventArgs e)
     {

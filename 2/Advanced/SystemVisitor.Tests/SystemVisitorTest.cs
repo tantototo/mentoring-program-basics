@@ -6,7 +6,7 @@ public class SystemVisitorTest
     public void CheckWithoutFilter_Success()
     {
         // Arrange
-        var root = @"C:\Users\Tkacheva\Downloads\курсы\курс рисования маслом\3 кактусы";
+        var root = @"";
 
         // Act 
         var visitor = new FileSystemVisitor(root);
@@ -20,8 +20,8 @@ public class SystemVisitorTest
     public void CheckWithFileFilter_Success()
     {
         // Arrange
-        var root = @"C:\Users\Tkacheva\Downloads\курсы\курс рисования маслом\все дополнительные материалы курса";
-        var filter = "jpg";
+        var root = @"";
+        var filter = "";
         Predicate<string> predicate = x => x.Contains(filter);
 
         // Act 
@@ -38,8 +38,8 @@ public class SystemVisitorTest
     public void CheckWithObjectNameFilter_Success()
     {
         // Arrange
-        var root = @"C:\Users\Tkacheva\Downloads\курсы\курс рисования маслом";
-        var filter = "кактусы";
+        var root = @"";
+        var filter = "";
         Predicate<string> predicate = x => x.Contains(filter);
 
         // Act 
@@ -56,8 +56,8 @@ public class SystemVisitorTest
     public void CheckEvent_StopAfterFilterFound_Success()
     {
         // Arrange
-        var root = @"C:\Users\Tkacheva\Downloads\курсы\курс рисования маслом";
-        var filter = "кактусы";
+        var root = @"";
+        var filter = "";
         Predicate<string> predicate = x => x.Contains(filter);
 
         // Act 
@@ -77,8 +77,8 @@ public class SystemVisitorTest
     public void CheckEvent_ExcludeWithFilter_Success()
     {
         // Arrange
-        var root = @"C:\Users\Tkacheva\Downloads\курсы\курс рисования маслом\все дополнительные материалы курса";
-        var filter = "pdf";
+        var root = @"";
+        var filter = "";
         Predicate<string> predicate = x => x.Contains(filter);
 
         // Act 
