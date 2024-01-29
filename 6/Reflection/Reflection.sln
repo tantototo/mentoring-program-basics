@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCContainer", "IOCContainer\IOCContainer.csproj", "{8EDA2622-268E-432E-A6CE-7A1077A6E7E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{8199EEFC-2703-4AD7-AD91-B267CB4AC7C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EDA2622-268E-432E-A6CE-7A1077A6E7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDA2622-268E-432E-A6CE-7A1077A6E7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDA2622-268E-432E-A6CE-7A1077A6E7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDA2622-268E-432E-A6CE-7A1077A6E7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8199EEFC-2703-4AD7-AD91-B267CB4AC7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8199EEFC-2703-4AD7-AD91-B267CB4AC7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8199EEFC-2703-4AD7-AD91-B267CB4AC7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8199EEFC-2703-4AD7-AD91-B267CB4AC7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
