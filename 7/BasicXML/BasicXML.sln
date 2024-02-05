@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLHandler", "XMLHandler\XMLHandler.csproj", "{C98F8AD6-6441-4613-924B-09035D27D841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLHandler.Tests", "XMLHandler.Tests\XMLHandler.Tests.csproj", "{E5EF629D-CF7D-4F0C-BF13-E2E70A3E3859}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C98F8AD6-6441-4613-924B-09035D27D841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98F8AD6-6441-4613-924B-09035D27D841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98F8AD6-6441-4613-924B-09035D27D841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98F8AD6-6441-4613-924B-09035D27D841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EF629D-CF7D-4F0C-BF13-E2E70A3E3859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EF629D-CF7D-4F0C-BF13-E2E70A3E3859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EF629D-CF7D-4F0C-BF13-E2E70A3E3859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EF629D-CF7D-4F0C-BF13-E2E70A3E3859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
