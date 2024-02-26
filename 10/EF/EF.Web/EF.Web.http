@@ -1,0 +1,27 @@
+@EF.Web_HostAddress = https://localhost:7164
+
+GET {{EF.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{EF.Web_HostAddress}}/weatherforecast
+
+###
+
+GET {{EF.Web_HostAddress}}/api/order
+
+###
+
+POST {{EF.Web_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+  //Product
+}
+
+###
+
+GET {{EF.Web_HostAddress}}/api/order/0
+
+###
