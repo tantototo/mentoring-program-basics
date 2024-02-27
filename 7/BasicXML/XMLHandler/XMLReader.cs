@@ -74,7 +74,7 @@ public class XMLReader
         return (T)poly;
     }
 
-    static IEnumerable<Book> GetBooks(XmlNodeList listBooks)
+    private static List<Book> GetBooks(XmlNodeList listBooks)
     {
         var books = new List<Book>();
         foreach (XmlElement bookXml in listBooks)
@@ -104,8 +104,8 @@ public class XMLReader
         }
         return books;
     }
-    
-    static IEnumerable<Newspaper> GetNewspapers(XmlNodeList listNewspapers)
+
+    private static List<Newspaper> GetNewspapers(XmlNodeList listNewspapers)
     {
         var newspapers = new List<Newspaper>();
         foreach (XmlElement newspaperXml in listNewspapers)
@@ -135,8 +135,8 @@ public class XMLReader
         }
         return newspapers;
     }
-    
-    static IEnumerable<Patent> GetPatents(XmlNodeList listPatents)
+
+    private static List<Patent> GetPatents(XmlNodeList listPatents)
     {
         var patents = new List<Patent>();
         foreach (XmlElement patentXml in listPatents)
