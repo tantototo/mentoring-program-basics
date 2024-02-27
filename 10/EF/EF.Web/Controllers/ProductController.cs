@@ -1,7 +1,5 @@
-﻿using EF.Infra.Context;
-using EF.Infra.Entities;
+﻿using EF.Web.Services.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EF.Web.Controllers
 {
@@ -9,39 +7,49 @@ namespace EF.Web.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly NorthwindContext _context;
+        private readonly IProductService _service;
 
-        public ProductController(NorthwindContext context)
+        public ProductController(IProductService service)
         {
-            _context = context;
+            _service = service;
         }
 
+        /// <summary>
+        /// Get all products
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            var result = await _context.Products
-                .Include(p => p.Category)
-                .ToListAsync();
+            var result = await _service.GetAllAsync();
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get product by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProductById(int id)
         {
-            var result = await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            var result = await _service.GetByIdAsync(id);
             if (result == null)
                 return NotFound("Entity not found");
 
             return Ok(result);
         }
 
+        /// <summary>
+        ///  Create product
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<int>> AddProduct(Product product)
         {
-            var result = _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-
-            return Ok(result.Entity.ProductId);
+            var result = await _service.AddAsync(product);
+            return Ok(result);
         }
 
     }

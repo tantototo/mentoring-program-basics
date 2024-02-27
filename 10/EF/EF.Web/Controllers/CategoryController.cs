@@ -1,8 +1,5 @@
-﻿using EF.Infra.Context;
-using EF.Infra.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using EF.Web.Services.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EF.Web.Controllers
 {
@@ -10,39 +7,50 @@ namespace EF.Web.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        private readonly NorthwindContext _context;
+        private readonly ICategoryService _service;
 
-        public CategoryController(NorthwindContext context)
+        public CategoryController(ICategoryService service)
         {
-            _context = context;
+            _service = service;
         }
 
+        /// <summary>
+        /// Get all categories
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Category>>> GetCategories()
         {
-            var result = await _context.Categories
-                .Include(c => c.Products)
-                .ToListAsync();
+            var result = await _service.GetAllAsync();
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get category by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategoryById(int id)
         {
-            var result = await _context.Categories.FirstOrDefaultAsync(p => p.CategoryId == id);
+            var result = await _service.GetByIdAsync(id);
             if (result == null)
                 return NotFound("Entity not found");
 
             return Ok(result);
         }
 
+        /// <summary>
+        /// Add category
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<int>> AddCategory(Category category)
         {
-            var result = _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
+            var result = await _service.AddAsync(category);
 
-            return Ok(result.Entity.CategoryId);
+            return Ok(result);
         }
     }
 }

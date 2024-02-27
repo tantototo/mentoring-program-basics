@@ -1,8 +1,5 @@
-﻿using EF.Infra.Context;
-using EF.Infra.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using EF.Web.Services.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EF.Web.Controllers
 {
@@ -10,21 +7,21 @@ namespace EF.Web.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly NorthwindContext _context;
+        private readonly IOrderService _service;
 
-        public OrderController(NorthwindContext context)
+        public OrderController(IOrderService service)
         {
-            _context = context;
+            _service = service;
         }
 
+        /// <summary>
+        /// Get all orders with details
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Order>>> GetOrders()
         {
-            var result = await _context.Orders
-                .Include(p => p.Customer)
-                .Include(p => p.OrderDetails)
-                .ThenInclude(d => d.Product)
-                .ToListAsync();
+            var result = await _service.GetAllAsync();
             return Ok(result);
         }
     }

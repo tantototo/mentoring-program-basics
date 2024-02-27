@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace EF.Infra.Entities
+﻿namespace EF.Infra.Entities
 {
     public class Category
     {
