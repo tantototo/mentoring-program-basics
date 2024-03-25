@@ -9,7 +9,7 @@ public class NorthwindContext : DataConnection
 {
     public NorthwindContext() : //base(OnCreating()) { } ?
         base("System.Data.SqlClient", 
-        "data source=Tkacheva;initial catalog=Northwind;integrated security=True;" +
+        "data source=___;initial catalog=Northwind;integrated security=True;" +
         "multipleactiveresultsets=True;App=EntityFramework") { }
 
     public ITable<Category> Categories => this.GetTable<Category>();
