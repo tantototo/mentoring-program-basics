@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+using MvcMusicStore.Infra;
 using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
@@ -20,7 +21,6 @@ namespace MvcMusicStore.Controllers
         }
 
         private const string XsrfKey = "XsrfId";
-
         private UserManager<ApplicationUser> _userManager;
 
         public AccountController()
@@ -318,6 +318,7 @@ namespace MvcMusicStore.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
+            Counter.LogOut.Increment();
 
             return RedirectToAction("Index", "Home");
         }
@@ -358,6 +359,7 @@ namespace MvcMusicStore.Controllers
                 await _userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
 
             AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = isPersistent }, identity);
+            Counter.LogIn.Increment();
 
             await MigrateShoppingCart(user.UserName);
         }
